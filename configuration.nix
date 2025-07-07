@@ -119,6 +119,7 @@
     gccgo15
     nodejs
     git
+    python3Full
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
