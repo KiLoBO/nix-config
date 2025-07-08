@@ -114,12 +114,15 @@
     trayscale
     distrobox
 
-    #AstroNVIM Required
+    # AstroNVIM Required
     rustup
     gccgo15
     nodejs
     git
     python3Full
+
+    # NIRI
+    fuzzel
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -146,6 +149,8 @@
   system.stateVersion = "25.05"; # Did you read the comment?
 
   # --------------------------------------
+
+  programs.niri.enable = true;
 
   nix.settings.experimental-features = [
     "nix-command"
