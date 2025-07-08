@@ -46,10 +46,6 @@
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
 
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -94,8 +90,8 @@
   };
 
   # Enable automatic login for the user.
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "david";
+  #services.displayManager.autoLogin.enable = true;
+  #services.displayManager.autoLogin.user = "david";
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -150,6 +146,9 @@
 
   # --------------------------------------
 
+  # DE settings
+  services.displayManager.sddm.enable = true;
+  services.desktopManager.plasma6.enable = true;
   programs.niri.enable = true;
 
   nix.settings.experimental-features = [
