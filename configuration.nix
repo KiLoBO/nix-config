@@ -109,6 +109,7 @@
     tailscale
     trayscale
     distrobox
+    maple-mono.Normal-NF
 
     # AstroNVIM Required
     rustup
@@ -147,9 +148,19 @@
   # --------------------------------------
 
   # DE settings
-  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.enable = false;
   services.desktopManager.plasma6.enable = true;
   programs.niri.enable = true;
+
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --remember --remember-session --time --cmd niri-session --theme border=magenta;text=cyan;prompt=green;time=red;action=blue;button=yellow;container=black;input=red";
+        user = "greeter";
+      };
+    };
+  };
 
   nix.settings.experimental-features = [
     "nix-command"
