@@ -23,6 +23,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
+  hardware.bluetooth.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
@@ -120,6 +121,8 @@
 
     # NIRI
     fuzzel
+    networkmanagerapplet
+    pavucontrol
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -151,6 +154,7 @@
   services.displayManager.sddm.enable = false;
   services.desktopManager.plasma6.enable = true;
   programs.niri.enable = true;
+  services.blueman.enable = true;
 
   services.greetd = {
     enable = true;
