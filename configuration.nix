@@ -123,6 +123,7 @@
     fuzzel
     networkmanagerapplet
     pavucontrol
+    blueman
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -154,7 +155,8 @@
   services.displayManager.sddm.enable = false;
   services.desktopManager.plasma6.enable = true;
   programs.niri.enable = true;
-  services.blueman.enable = true;
+  services.gnome.gnome-keyring.enable = true; # secret service
+  security.pam.services.swaylock = { };
 
   services.greetd = {
     enable = true;
