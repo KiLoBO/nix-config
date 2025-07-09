@@ -124,6 +124,7 @@
     networkmanagerapplet
     pavucontrol
     blueman
+    libnotify
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -156,7 +157,7 @@
   services.desktopManager.plasma6.enable = true;
   programs.niri.enable = true;
   services.gnome.gnome-keyring.enable = true; # secret service
-  security.pam.services.swaylock = { };
+  security.pam.services.hyprlock = { };
 
   services.greetd = {
     enable = true;
