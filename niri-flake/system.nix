@@ -3,6 +3,7 @@
   # Niri specific services/settings (sys level)
   programs.niri.enable = true;
   services.gnome.gnome-keyring.enable = true; # secret service
+  services.hypridle.enable = true;
   security.pam.services.hyprlock = { };
 
   services.greetd = {
@@ -21,14 +22,9 @@
       swaynotificationcenter
       wlogout
       hyprlock
-      hypridle
       pavucontrol
       fuzzel
     ];
-
-    services = {
-      services.hypridle.enable = true;
-    };
   };
 
   environment.systemPackages = with pkgs; [
