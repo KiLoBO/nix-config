@@ -153,21 +153,11 @@
   # --------------------------------------
 
   # DE settings
-  services.displayManager.sddm.enable = false;
+  services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   programs.niri.enable = true;
   services.gnome.gnome-keyring.enable = true; # secret service
   security.pam.services.hyprlock = { };
-
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --remember --remember-session --time --cmd niri-session --theme border=magenta;text=cyan;prompt=green;time=red;action=blue;button=yellow;container=black;input=red";
-        user = "greeter";
-      };
-    };
-  };
 
   nix.settings.experimental-features = [
     "nix-command"
