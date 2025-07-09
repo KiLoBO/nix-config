@@ -7,9 +7,11 @@
     { nixpkgs, ... }:
     {
       # System-level config
-      nixosConfiguration.nixpad = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.nixpad = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
         modules = [
-          ./system.nix # Niri specific system additions
+          ./system.nix
+          /etc/nixos/configuration.nix
         ];
       };
     };
