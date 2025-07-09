@@ -15,6 +15,22 @@
     };
   };
 
+  users.users.david = {
+    packages = with pkgs; [
+      swaybg
+      swaynotificationcenter
+      wlogout
+      hyprlock
+      hypridle
+      pavucontrol
+      fuzzel
+    ];
+
+    services = {
+      services.hypridle.enable = true;
+    };
+  };
+
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
     blueman
