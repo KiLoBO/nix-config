@@ -5,16 +5,7 @@
   services.gnome.gnome-keyring.enable = true; # secret service
   services.hypridle.enable = true;
   security.pam.services.hyprlock = { };
-
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --remember --remember-session --time --cmd niri-session --theme border=magenta;text=cyan;prompt=green;time=red;action=blue;button=yellow;container=black;input=red";
-        user = "greeter";
-      };
-    };
-  };
+  programs.waybar.enable = true;
 
   users.users.david = {
     packages = with pkgs; [

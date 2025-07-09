@@ -11,7 +11,7 @@
         system = "x86_64-linux";
         modules = [
           ./system.nix
-          /etc/nixos/configuration.nix
+          ../configuration.nix
         ];
       };
     };
