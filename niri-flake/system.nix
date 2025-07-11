@@ -5,7 +5,7 @@
   services.gnome.gnome-keyring.enable = true; # secret service
   services.hypridle.enable = true;
   security.pam.services.hyprlock = { };
-  programs.waybar.enable = true;
+  # programs.waybar.enable = true;
 
   users.users.david = {
     packages = with pkgs; [
@@ -15,6 +15,7 @@
       hyprlock
       pavucontrol
       fuzzel
+      waybar
     ];
   };
 
