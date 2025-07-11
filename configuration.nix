@@ -146,6 +146,13 @@
 
   # --------------------------------------
 
+  hardware.opengl = {
+    enable = true;
+    extraPackages = with pkgs; [
+      vpl-gpu-rt
+    ];
+  };
+
   # DE settings
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
