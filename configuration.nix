@@ -119,12 +119,6 @@
     git
     python3Full
 
-    # NIRI
-    #fuzzel
-    #networkmanagerapplet
-    #pavucontrol
-    #blueman
-    #libnotify
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -155,9 +149,6 @@
   # DE settings
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
-  #programs.niri.enable = true;
-  #services.gnome.gnome-keyring.enable = true; # secret service
-  #security.pam.services.hyprlock = { };
 
   nix.settings.experimental-features = [
     "nix-command"
