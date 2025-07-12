@@ -85,7 +85,7 @@
       "wheel"
     ];
     packages = with pkgs; [
-      kdePackages.kate
+      # kdePackages.kate
       #  thunderbird
     ];
   };

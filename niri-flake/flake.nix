@@ -8,7 +8,12 @@
   };
 
   outputs =
-    { nixpkgs, ... }:
+    {
+      self,
+      nixpkgs,
+      quickshell,
+      ...
+    }:
     {
       # System-level config
       nixosConfigurations.nixpad = nixpkgs.lib.nixosSystem {
@@ -16,6 +21,7 @@
         modules = [
           ./system.nix
           ../configuration.nix
+          { environment.systemPackages = [ quickshell.packages.x86_64-linux.default ]; }
         ];
       };
     };
