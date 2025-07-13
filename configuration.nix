@@ -155,7 +155,7 @@
 
   # DE settings
   services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  # services.desktopManager.plasma6.enable = true;
 
   nix.settings.experimental-features = [
     "nix-command"
