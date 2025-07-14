@@ -112,6 +112,9 @@
     distrobox
     maple-mono.Normal-NF
 
+    # QT
+    sddm-astronaut
+
     # Rust
     rustup
 
@@ -156,7 +159,11 @@
   };
 
   # DE settings
-  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm = {
+    enable = true;
+    theme = "sddm-astronaut-theme";
+    wayland.enable = true;
+  };
   # services.desktopManager.plasma6.enable = true;
 
   nix.settings.experimental-features = [
