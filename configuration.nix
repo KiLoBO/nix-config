@@ -111,8 +111,6 @@
     trayscale
     distrobox
     maple-mono.Normal-NF
-
-    # QT
     sddm-astronaut
 
     # Rust
@@ -161,8 +159,20 @@
   # DE settings
   services.displayManager.sddm = {
     enable = true;
+    package = pkgs.kdePackages.sddm;
     theme = "sddm-astronaut-theme";
     wayland.enable = true;
+    extraPackages = with pkgs; [
+      sddm-astronaut
+      kdePackages.qtbase
+      kdePackages.qtwayland
+      kdePackages.qtmultimedia
+    ];
+    settings = {
+      Theme = {
+        Current = "sddm-astronaut-theme";
+      };
+    };
   };
   # services.desktopManager.plasma6.enable = true;
 
