@@ -21,6 +21,7 @@
         modules = [
           ./system.nix
           ../configuration.nix
+          ./modules/sddm.nix
           { environment.systemPackages = [ quickshell.packages.x86_64-linux.default ]; }
         ];
       };
