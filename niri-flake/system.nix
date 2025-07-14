@@ -23,6 +23,7 @@
     blueman
     libnotify
     xdg-desktop-portal-gnome
+    xwayland-satellite
 
     # QT
     libsForQt5.qt5.qtsvg
