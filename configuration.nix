@@ -112,8 +112,10 @@
     distrobox
     maple-mono.Normal-NF
 
-    # AstroNVIM Required
+    # Rust
     rustup
+
+    # AstroNVIM Required
     gccgo15
     nodejs
     git
@@ -155,7 +157,7 @@
 
   # DE settings
   services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
+  # services.desktopManager.plasma6.enable = true;
 
   nix.settings.experimental-features = [
     "nix-command"
@@ -183,6 +185,8 @@
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1"; # Enable Wayland support for Ozone
+    XCURSOR_THEME = "catppuccin-macchiato-dark-cursors";
+    XCURSOR_SIZE = "24";
   };
 
   programs.zsh.enable = true;
