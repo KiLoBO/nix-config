@@ -112,6 +112,7 @@
     distrobox
     maple-mono.Normal-NF
     sddm-astronaut
+    kdePackages.kwalletmanager
 
     # Rust
     rustup
