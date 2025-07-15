@@ -4,7 +4,7 @@ let
   custom_sddm_astronaut = pkgs.sddm-astronaut.override {
     embeddedTheme = "jake_the_dog";
     themeConfig = {
-      Background = "${pkgs.sddm-astronaut}/share/sddm/themes/sddm-astronaut-theme/Backgrounds/jake_the_dog.mp4";
+      Background = "/run/current-system/sw/share/sddm/themes/sddm-astronaut-theme/Backgrounds/jake_the_dog.mp4";
     };
   };
 in
