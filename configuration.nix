@@ -112,7 +112,6 @@
     trayscale
     distrobox
     maple-mono.Normal-NF
-    sddm-astronaut
 
     # Rust
     rustup

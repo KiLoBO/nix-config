@@ -1,11 +1,9 @@
 { pkgs, ... }:
 
+# Set the theme in embeddedTheme according to name in sddm-astronaut repo.
 let
-  custom_sddm_astronaut = pkgs.sddm-astronaut.override {
+  sddm-astronaut = pkgs.sddm-astronaut.override {
     embeddedTheme = "jake_the_dog";
-    themeConfig = {
-      Background = "/run/current-system/sw/share/sddm/themes/sddm-astronaut-theme/Backgrounds/jake_the_dog.mp4";
-    };
   };
 in
 {
@@ -14,12 +12,11 @@ in
     package = pkgs.kdePackages.sddm;
     theme = "sddm-astronaut-theme";
     wayland.enable = true;
-    extraPackages = with pkgs; [
-      custom_sddm_astronaut
-      #sddm-astronaut
-      kdePackages.qtbase
-      kdePackages.qtwayland
-      kdePackages.qtmultimedia
+    extraPackages = [
+      sddm-astronaut
+      pkgs.kdePackages.qtbase
+      pkgs.kdePackages.qtwayland
+      pkgs.kdePackages.qtmultimedia
     ];
     settings = {
       Theme = {
@@ -27,4 +24,5 @@ in
       };
     };
   };
+  environment.systemPackages = [ sddm-astronaut ];
 }
