@@ -24,7 +24,6 @@ in
     settings = {
       Theme = {
         Current = "sddm-astronaut-theme";
-        ThemeDir = "${pkgs.sddm-astronaut}/share/sddm/themes/sddm-astronaut-theme/Themes";
       };
     };
   };

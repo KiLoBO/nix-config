@@ -3,6 +3,7 @@
   # Niri specific services/settings (sys level)
   programs.niri.enable = true;
   services.gnome.gnome-keyring.enable = true; # secret service
+  programs.seahorse.enable = true;
   services.hypridle.enable = true;
   security.pam.services.hyprlock = { };
 
@@ -24,5 +25,6 @@
     libnotify
     xdg-desktop-portal-gnome
     xwayland-satellite
+    libsecret
   ];
 }
