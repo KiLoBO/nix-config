@@ -113,9 +113,6 @@
     distrobox
     maple-mono.Normal-NF
     sddm-astronaut
-    kdePackages.kwalletmanager
-    kdePackages.kwallet
-    kwalletcli
 
     # Rust
     rustup
@@ -153,8 +150,10 @@
 
   # --------------------------------------
 
+  programs.git.enable = true;
+
   # Secret Services
-  security.pam.services.kdewallet.kwallet.enable = true;
+  security.pam.services.gnome-keyring.enable = true;
 
   hardware.opengl = {
     enable = true;
