@@ -114,7 +114,8 @@
     maple-mono.Normal-NF
     sddm-astronaut
     kdePackages.kwalletmanager
-    libsecret
+    kdePackages.kwallet
+    kwalletcli
 
     # Rust
     rustup
