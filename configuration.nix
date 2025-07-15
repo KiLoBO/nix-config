@@ -151,6 +151,10 @@
 
   # --------------------------------------
 
+  # Secret Services
+  services.passSecretService.enable = true;
+  security.pam.services.kdewallet.kwallet.enable = true;
+
   hardware.opengl = {
     enable = true;
     extraPackages = with pkgs; [
