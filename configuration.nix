@@ -114,6 +114,7 @@
     maple-mono.Normal-NF
     sddm-astronaut
     kdePackages.kwalletmanager
+    libsecret
 
     # Rust
     rustup
@@ -152,7 +153,6 @@
   # --------------------------------------
 
   # Secret Services
-  services.passSecretService.enable = true;
   security.pam.services.kdewallet.kwallet.enable = true;
 
   hardware.opengl = {
