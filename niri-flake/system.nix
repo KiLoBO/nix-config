@@ -14,7 +14,6 @@
       wlogout
       hyprlock
       pavucontrol
-      fuzzel
       waybar
     ];
   };
