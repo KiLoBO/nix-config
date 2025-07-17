@@ -7,16 +7,11 @@
   services.hypridle.enable = true;
   security.pam.services.hyprlock = { };
 
-  users.users.david = {
-    packages = with pkgs; [
-      swaybg
-      swaynotificationcenter
-      wlogout
-      hyprlock
-      pavucontrol
-      waybar
-    ];
-  };
+  # users.users.david = {
+  #   packages = with pkgs; [
+  #     Should stay un-used. Use HM for user pkgs.
+  #   ];
+  # };
 
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
