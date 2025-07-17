@@ -33,6 +33,7 @@
     pkgs.hyprpicker
     pkgs.webcord
     pkgs.manix
+    pkgs.tree
 
     # AstroNVIM Required
     pkgs.ripgrep
@@ -119,6 +120,28 @@
 
   };
 
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+    colors = {
+      "bg+" = "#313244";
+      "bg" = "#1E1E2E";
+      "spinner" = "#F5E0DC";
+      "hl" = "#F38BA8";
+      "fg" = "#CDD6F4";
+      "header" = "#F38BA8";
+      "info" = "#CBA6F7";
+      "pointer" = "#F5E0DC";
+      "marker" = "#B4BEFE";
+      "fg+" = "#CDD6F4";
+      "prompt" = "#CBA6F7";
+      "hl+" = "#F38BA8";
+      "selected-bg" = "#45475A";
+      "border" = "#313244";
+      "label" = "#CDD6F4";
+    };
+  };
+
   programs.starship.enable = true;
   programs.zsh = {
     enable = true;
@@ -129,8 +152,9 @@
     shellAliases = {
       ll = "ls -l";
       update-nix = "nh os switch -a -f '<nixpkgs/nixos>'";
-      update-home = "home-manager switch";
       clear = "clear; nitch";
+      ssh = "kitten ssh";
+      fmanix = ''manix "" | grep '^# ' | sed 's/^# \(.*\) (.*/\1/;s/ (.*//;s/^# //' | fzf --preview="manix '{}'" | xargs manix'';
     };
 
     initContent = ''
