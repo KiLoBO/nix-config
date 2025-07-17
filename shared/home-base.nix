@@ -31,7 +31,7 @@
     pkgs.xdg-utils
     pkgs.imagemagick
     pkgs.hyprpicker
-    pkgs.discord
+    pkgs.webcord
 
     # AstroNVIM Required
     pkgs.ripgrep
