@@ -32,6 +32,7 @@
     pkgs.imagemagick
     pkgs.hyprpicker
     pkgs.webcord
+    pkgs.manix
 
     # AstroNVIM Required
     pkgs.ripgrep
