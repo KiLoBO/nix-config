@@ -3,7 +3,7 @@
 {
   home.username = "david";
   home.homeDirectory = "/home/david";
-  nixpkgs.config.allowUnfree = true;
+  # nixpkgs.config.allowUnfree = true;
 
   # You should not change this value, even if you update Home Manager. If you do
   # want to update the value, then make sure to first check the Home Manager
@@ -31,6 +31,7 @@
     pkgs.xdg-utils
     pkgs.imagemagick
     pkgs.hyprpicker
+    pkgs.discord
 
     # AstroNVIM Required
     pkgs.ripgrep
