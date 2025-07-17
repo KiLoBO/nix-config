@@ -8,6 +8,10 @@
     hyprlock
     pavucontrol
     waybar
+
+    # gnome portal required
+    nautilus
+    nautilus-open-any-terminal
   ];
 
   xdg.portal.config = {
