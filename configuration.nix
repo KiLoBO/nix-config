@@ -112,6 +112,7 @@
     trayscale
     distrobox
     maple-mono.Normal-NF
+    killall
 
     # Rust
     rustup
