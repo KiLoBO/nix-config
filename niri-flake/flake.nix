@@ -32,6 +32,7 @@
           ./modules/sddm.nix
 
           catppuccin.nixosModules.catppuccin
+          ../shared/themes/catppuccin/system
 
           home-manager.nixosModules.home-manager
           {
@@ -42,7 +43,9 @@
               imports = [
                 ../shared/home-base.nix
                 ./home-niri.nix
+
                 catppuccin.homeModules.catppuccin
+                ../shared/themes/catppuccin/home
               ];
             };
           }
