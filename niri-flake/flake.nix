@@ -7,6 +7,8 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs =
@@ -14,6 +16,7 @@
       self,
       nixpkgs,
       home-manager,
+      catppuccin,
       ...
     }@inputs:
     {
@@ -28,6 +31,8 @@
           # Extra Modules
           ./modules/sddm.nix
 
+          catppuccin.nixosModules.catppuccin
+
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
@@ -37,6 +42,7 @@
               imports = [
                 ../shared/home-base.nix
                 ./home-niri.nix
+                catppuccin.homeModules.catppuccin
               ];
             };
           }
