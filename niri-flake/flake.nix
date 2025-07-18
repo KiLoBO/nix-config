@@ -32,7 +32,6 @@
           ./modules/sddm.nix
 
           catppuccin.nixosModules.catppuccin
-          ../shared/themes/catppuccin
 
           home-manager.nixosModules.home-manager
           {
@@ -45,6 +44,7 @@
                 ./home-niri.nix
 
                 catppuccin.homeModules.catppuccin
+                ../shared/themes/catppuccin
               ];
             };
           }
