@@ -155,9 +155,10 @@
   # Secret Services
   security.pam.services.gnome-keyring.enable = true;
 
-  hardware.opengl = {
+  hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
+      intel-media-driver
       vpl-gpu-rt
     ];
   };
@@ -190,6 +191,7 @@
     NIXOS_OZONE_WL = "1"; # Enable Wayland support for Ozone
     XCURSOR_THEME = "catppuccin-macchiato-dark-cursors";
     XCURSOR_SIZE = "24";
+    LIBVA_DRIVER_NAME = "iHD";
   };
 
   programs.zsh.enable = true;
