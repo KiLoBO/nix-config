@@ -189,7 +189,7 @@
 
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1"; # Enable Wayland support for Ozone
-    XCURSOR_THEME = "catppuccin-macchiato-dark-cursors";
+    XCURSOR_THEME = "Capitaine Cursors (Palenight)";
     XCURSOR_SIZE = "24";
     LIBVA_DRIVER_NAME = "iHD";
   };

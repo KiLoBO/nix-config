@@ -73,7 +73,6 @@
     EDITOR = "nvim";
     PATH = "$PATH:/home/david/.cargo/bin:/home/david/.local/share/nvim/mason/bin";
     TERMINAL = "kitty";
-    XCURSOR_THEME = "catppuccin-macchiato-dark-cursors";
   };
 
   # ----------------------------------------------------------------------------

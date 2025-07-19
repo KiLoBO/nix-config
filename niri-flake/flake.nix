@@ -32,6 +32,12 @@
           ./modules/sddm.nix
 
           catppuccin.nixosModules.catppuccin
+          {
+            catppuccin.enable = true;
+            catppuccin.flavor = "mocha";
+            catppuccin.accent = "lavender";
+            catppuccin.sddm.enable = false;
+          }
 
           home-manager.nixosModules.home-manager
           {
