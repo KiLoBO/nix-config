@@ -6,6 +6,7 @@
   programs.seahorse.enable = true;
   services.hypridle.enable = true;
   security.pam.services.hyprlock = { };
+  programs.dconf.enable = true;
 
   # users.users.david = {
   #   packages = with pkgs; [

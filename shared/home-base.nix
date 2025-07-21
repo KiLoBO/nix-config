@@ -35,6 +35,7 @@
     pkgs.manix
     pkgs.tree
     pkgs.gtk-engine-murrine
+    pkgs.glib
 
     # AstroNVIM Required
     pkgs.ripgrep
