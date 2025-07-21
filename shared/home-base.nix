@@ -95,27 +95,6 @@
 
   services.cliphist.enable = true;
 
-  # gtk = {
-  #   enable = true;
-  #   font.name = "TeX Gyre Adventor 10";
-  #   theme = {
-  #     name = "Juno-Mirage";
-  #     package = pkgs.juno-theme;
-  #   };
-  #   iconTheme = {
-  #     name = "Papirus-Dark";
-  #     package = pkgs.papirus-icon-theme;
-  #   };
-  #
-  #   gtk3.extraConfig = {
-  #     gtk-application-prefer-dark-theme = true;
-  #   };
-  #
-  #   gtk4.extraConfig = {
-  #     gtk-application-prefer-dark-theme = true;
-  #   };
-  # };
-
   programs.fzf = {
     enable = true;
     enableZshIntegration = true;
