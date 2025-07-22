@@ -41,6 +41,12 @@
     pkgs.ripgrep
     pkgs.lazygit
 
+    # LSP
+    pkgs.lua-language-server
+    pkgs.ruff
+    pkgs.selene
+    pkgs.stylua
+
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -119,16 +125,6 @@
       nitch
       eval "$(starship init zsh)"
     '';
-  };
-
-  programs.neovim = {
-    enable = true;
-    extraPackages = with pkgs; [
-      lua-language-server
-      ruff
-      selene
-      stylua
-    ];
   };
 
   programs.vscode = {

@@ -72,6 +72,7 @@
         enable = true;
         tap = true;
         dwt = true;
+        natural-scroll = false;
         scroll-method = "two-finger";
         disabled-on-external-mouse = true;
       };
@@ -95,7 +96,7 @@
     
       focus-ring = {
         enable = true;
-        width = 20;
+        width = 2;
         active.color = "#7fc8ff";
         inactive.color = "#505050";
       };
