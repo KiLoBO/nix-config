@@ -1,18 +1,16 @@
-{ pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 {
   # Niri specific services/settings (sys level)
+  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
   programs.niri.enable = true;
+  programs.niri.package = pkgs.niri-stable;
+  niri-flake.cache.enable = true;
+  
   services.gnome.gnome-keyring.enable = true; # secret service
   programs.seahorse.enable = true;
   services.hypridle.enable = true;
   security.pam.services.hyprlock = { };
   programs.dconf.enable = true;
-
-  # users.users.david = {
-  #   packages = with pkgs; [
-  #     Should stay un-used. Use HM for user pkgs.
-  #   ];
-  # };
 
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
@@ -23,4 +21,11 @@
     xwayland-satellite
     libsecret
   ];
+
+  # Theming
+  catppuccin.enable = true;
+  catppuccin.flavor = "mocha";
+  catppuccin.accent = "lavender";
+  catppuccin.sddm.enable = false;
+
 }
