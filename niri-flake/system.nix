@@ -2,8 +2,10 @@
 {
   # Niri specific services/settings (sys level)
   nixpkgs.overlays = [ inputs.niri.overlays.niri ];
-  programs.niri.enable = true;
-  programs.niri.package = pkgs.niri-stable;
+  programs.niri = {
+    enable = true;
+    package = pkgs.niri-stable;
+  };
   niri-flake.cache.enable = true;
   
   services.gnome.gnome-keyring.enable = true; # secret service
@@ -20,6 +22,7 @@
     xdg-desktop-portal-gtk
     xwayland-satellite
     libsecret
+    niri-stable
   ];
 
   # Theming
