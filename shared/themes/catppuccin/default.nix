@@ -20,6 +20,7 @@
     enable = true;
     accent = "lavender";
     flavor = "mocha";
+    zsh-syntax-highlighting.enable = false;
     gtk = {
       icon.enable = true;
       icon.accent = "lavender";

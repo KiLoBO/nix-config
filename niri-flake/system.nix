@@ -1,7 +1,9 @@
 { config, lib, pkgs, inputs, ... }:
 {
   # Niri specific services/settings (sys level)
-  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+  nixpkgs.overlays = [ 
+    inputs.niri.overlays.niri
+  ];
   programs.niri = {
     enable = true;
     package = pkgs.niri-stable;

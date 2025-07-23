@@ -11,7 +11,10 @@
       url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    catppuccin.url = "github:catppuccin/nix";
+    catppuccin = {
+      url = "github:catppuccin/nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, catppuccin, niri, ... }@inputs:
@@ -20,7 +23,9 @@
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
-        { nixpkgs.overlays = [ niri.overlays.niri ];}
+        { nixpkgs.overlays = [ 
+            niri.overlays.niri 
+        ];}
 
         # Base sys config (not env specific)
         ../configuration.nix
