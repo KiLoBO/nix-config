@@ -54,14 +54,14 @@
     };
 
     spawn-at-startup = [
-      # { command = ["waybar"]; }
-      # { command = ["nm-applet"]; }
+      { command = ["waybar"]; }
+      { command = ["nm-applet"]; }
       { command = ["swaybg" "-i" "/home/david/gitProjects/nix-config/shared/wallpaper/spookyspillUpscaled.jpeg"]; }
-      # { command = ["swaync"]; }
+      { command = ["swaync"]; }
       { command = ["hypridle"]; }
       { command = ["wl-paste" "--watch" "cliphist" "store"]; }
       { command = ["xwayland-satellite"]; }
-      { command = ["sh" "-c" "cd ~/gitProjects/clones/astal-bar && nix develop --command nix run .#default"]; }
+      # { command = ["sh" "-c" "cd ~/gitProjects/clones/astal-bar && nix develop --command nix run .#default"]; }
     ];
 
     input = {
