@@ -40,7 +40,7 @@
     screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
     
     environment = {
-      DISPLAY = "";
+      DISPLAY = ":0";
     };
   
     outputs."eDP-1" = {
