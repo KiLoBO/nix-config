@@ -155,6 +155,9 @@
   # Secret Services
   security.pam.services.gnome-keyring.enable = true;
 
+  services.upower.enable = true;
+  services.power-profiles-daemon.enable = true;
+
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
@@ -176,6 +179,7 @@
     nerd-fonts.caskaydia-mono
     nerd-fonts.jetbrains-mono
     nerd-fonts.fantasque-sans-mono
+    material-symbols
   ];
 
   services.flatpak.enable = true;

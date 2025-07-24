@@ -15,6 +15,7 @@
   services.hypridle.enable = true;
   security.pam.services.hyprlock = { };
   programs.dconf.enable = true;
+  qt.enable = true;
 
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
@@ -25,7 +26,25 @@
     xwayland-satellite
     libsecret
     niri-stable
-  ];
+
+    # Core Qt components
+    # qt6.qtbase
+    # qt6.qtdeclarative
+    # qt6.qttools
+    #
+    # Extra Qt packages needed for QuickShell
+    # libsForQt5.qt5.qtsvg
+    # libsForQt5.qt5.qtimageformats
+    # libsForQt5.qt5.qtmultimedia
+    # qt6Packages.qt5compat
+
+    qt6Packages.qt5compat
+    libsForQt5.qt5.qtgraphicaleffects
+    kdePackages.qtbase
+    kdePackages.qtdeclarative
+    kdePackages.qtstyleplugin-kvantum
+    matugen
+];
 
   # Theming
   catppuccin.enable = true;

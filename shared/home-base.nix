@@ -36,6 +36,9 @@
     pkgs.tree
     pkgs.gtk-engine-murrine
     pkgs.glib
+    pkgs.unzip
+    pkgs.claude-code
+    pkgs.jetbrains.pycharm-community-bin
 
     # AstroNVIM Required
     pkgs.ripgrep
@@ -83,7 +86,7 @@
   };
 
   # ----------------------------------------------------------------------------
-
+  
   programs.fuzzel.enable = true;
   programs.fuzzel.settings = {
     colors.background = "24273add";
