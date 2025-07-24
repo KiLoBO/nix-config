@@ -113,6 +113,7 @@
     distrobox
     maple-mono.Normal-NF
     killall
+    nix-index
 
     # Rust
     rustup
