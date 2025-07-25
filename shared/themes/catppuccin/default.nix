@@ -21,6 +21,7 @@
     accent = "lavender";
     flavor = "mocha";
     zsh-syntax-highlighting.enable = false;
+    vscode.profiles.default.enable = false;
     gtk = {
       icon.enable = true;
       icon.accent = "lavender";

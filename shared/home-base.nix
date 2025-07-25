@@ -109,6 +109,7 @@
     enableZshIntegration = true;
   };
 
+  programs.command-not-found.enable = true;
   programs.starship.enable = true;
   programs.zsh = {
     enable = true;
@@ -151,7 +152,7 @@
           version = "0.4.22";
           sha256 = "j3V03Aa1mHO9rny3/hXmDbs3fmruqyzNzwFjiOlnaMU=";
         }
-      ];
+      ];    
   };
 
 }
