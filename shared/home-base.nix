@@ -46,6 +46,7 @@
 
     # LSP
     pkgs.lua-language-server
+    pkgs.yaml-language-server
     pkgs.ruff
     pkgs.selene
     pkgs.stylua
