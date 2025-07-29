@@ -1,1 +1,3 @@
-# Stumbling awayyyy
+# Watch me stumble away at NixOS...
+
+Take my configurations with a grain of salt... its probably done in a less then optimal way. I am no coder.
