@@ -39,7 +39,7 @@
     pkgs.unzip
     pkgs.claude-code
     pkgs.jetbrains.pycharm-community-bin
-    pkgs.gvfs
+    # pkgs.gvfs
     pkgs.gnome.gvfs
 
     # AstroNVIM Required
