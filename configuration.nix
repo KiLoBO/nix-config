@@ -151,6 +151,7 @@
 
   # --------------------------------------
 
+  services.gvfs.enable = true;
   programs.git.enable = true;
 
   # Secret Services

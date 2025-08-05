@@ -38,9 +38,7 @@
     pkgs.glib
     pkgs.unzip
     pkgs.claude-code
-    pkgs.jetbrains.pycharm-community-bin
-    # pkgs.gvfs
-    pkgs.gnome.gvfs
+    pkgs.jetbrains.pycharm-community-bin 
 
     # AstroNVIM Required
     pkgs.ripgrep
