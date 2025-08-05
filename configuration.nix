@@ -115,6 +115,7 @@
     killall
     nix-index
     davfs2
+    gvfs
 
     # Rust
     rustup
