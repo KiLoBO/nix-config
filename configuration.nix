@@ -114,6 +114,7 @@
     maple-mono.Normal-NF
     killall
     nix-index
+    davfs2
 
     # Rust
     rustup
