@@ -38,7 +38,8 @@
     pkgs.glib
     pkgs.unzip
     pkgs.claude-code
-    pkgs.jetbrains.pycharm-community-bin 
+    pkgs.jellyfin-media-player
+    pkgs.discord
 
     # AstroNVIM Required
     pkgs.ripgrep
