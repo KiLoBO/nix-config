@@ -37,6 +37,8 @@
         ./system.nix
         # Extra Modules
         ./modules/sddm.nix
+        # Nix-ld
+        ../shared/nix-ld.nix
         niri.nixosModules.niri
         catppuccin.nixosModules.catppuccin
 
