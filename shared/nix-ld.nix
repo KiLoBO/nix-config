@@ -35,6 +35,10 @@
 
       glib
       gtk2
+
+      pango
+      gdk-pixbuf
+      gtk4
     ];
   };
 }
