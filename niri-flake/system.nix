@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, pkgs-unstable, ... }:
 {
   # Niri specific services/settings (sys level)
   nixpkgs.overlays = [ 
@@ -44,7 +44,9 @@
     kdePackages.qtdeclarative
     kdePackages.qtstyleplugin-kvantum
     matugen
-];
+] ++ (with pkgs-unstable; [
+      nmgui
+    ]);
 
   # Theming
   catppuccin.enable = true;
