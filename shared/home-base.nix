@@ -40,6 +40,7 @@
     pkgs.claude-code
     pkgs.jellyfin-media-player
     pkgs.discord
+    pkgs.rustscan
 
     # AstroNVIM Required
     pkgs.ripgrep
