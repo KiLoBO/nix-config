@@ -111,7 +111,6 @@
     neovim
     tailscale
     trayscale
-    distrobox
     maple-mono.Normal-NF
     killall
     nix-index
@@ -208,9 +207,4 @@
   programs.zsh.enable = true;
 
   virtualisation.docker.enable = true;
-
-  virtualisation.podman = {
-    enable = true;
-    dockerCompat = true;
-  };
 }
