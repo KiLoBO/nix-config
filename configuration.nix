@@ -84,6 +84,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "docker"
     ];
     packages = with pkgs; [
       # kdePackages.kate
@@ -114,6 +115,10 @@
     maple-mono.Normal-NF
     killall
     nix-index
+
+    # winboat
+    freerdp
+    docker-compose
 
     # Rust
     rustup
@@ -201,6 +206,8 @@
   };
 
   programs.zsh.enable = true;
+
+  virtualisation.docker.enable = true;
 
   virtualisation.podman = {
     enable = true;
