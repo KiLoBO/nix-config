@@ -159,6 +159,9 @@
   services.gvfs.enable = true;
   programs.git.enable = true;
 
+  programs.appimage.enable = true;
+  programs.appimage.binfmt = true;
+
   # Secret Services
   security.pam.services.gnome-keyring.enable = true;
 
