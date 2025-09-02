@@ -119,7 +119,7 @@
     # winboat
     freerdp
     docker-compose
-
+    appimage-run
     # Rust
     rustup
 
