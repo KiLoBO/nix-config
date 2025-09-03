@@ -116,6 +116,9 @@
     killall
     nix-index
 
+    # smartcard
+    pcsc-tools
+
     # winboat
     freerdp
     docker-compose
@@ -155,6 +158,9 @@
   system.stateVersion = "25.05"; # Did you read the comment?
 
   # --------------------------------------
+
+  # Smartcard
+  services.pcscd.enable = true;
 
   services.gvfs.enable = true;
   programs.git.enable = true;
