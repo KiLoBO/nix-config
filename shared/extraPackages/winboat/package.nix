@@ -15,7 +15,7 @@ let
     inherit pname version;
     src = fetchurl {
       url = "https://github.com/TibixDev/winboat/releases/download/v${version}/winboat-${version}-x86_64.AppImage";
-      hash = "Jy0OiTOYWzezyOgQe8PZWpi7Hh4q0qJsqWzZzAjxtyQ=";
+      hash = "sha256-Jy0OiTOYWzezyOgQe8PZWpi7Hh4q0qJsqWzZzAjxtyQ=";
     };
   };
 
