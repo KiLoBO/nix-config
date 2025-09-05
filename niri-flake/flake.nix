@@ -49,7 +49,7 @@
         ../shared/nix-ld.nix
         niri.nixosModules.niri
         catppuccin.nixosModules.catppuccin
-
+        winboat.nixosModules.winboat
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;

@@ -3,9 +3,9 @@
   outputs =
     { ... }:
     {
-      modules = [
+      nixosModules = { 
         # Winboat
-        ./winboat
-      ];
+        winboat = import ./winboat;
+      };
     };
 }
