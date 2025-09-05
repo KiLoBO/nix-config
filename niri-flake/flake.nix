@@ -23,7 +23,7 @@
     winboat.url = "path:../shared/extraPackages";
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, niri, quickshell, nixpkgs-unstable, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, catppuccin, niri, quickshell, nixpkgs-unstable, winboat, ... }@inputs:
   {
     nixosConfigurations.nixpad = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -38,7 +38,10 @@
         { nixpkgs.overlays = [ 
             niri.overlays.niri 
         ];}
-        { environment.systemPackages = [ quickshell.packages.x86_64-linux.default ]; }
+        { environment.systemPackages = [ 
+            quickshell.packages.x86_64-linux.default
+            winboat.packages.x86_64-linux.default
+          ]; }
         # Base sys config (not env specific)
         ../configuration.nix
         # ENV specific sys config

@@ -174,8 +174,20 @@
         "niri": "niri",
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
-        "quickshell": "quickshell"
+        "quickshell": "quickshell",
+        "winboat": "winboat"
       }
+    },
+    "winboat": {
+      "locked": {
+        "path": "../shared/extraPackages",
+        "type": "path"
+      },
+      "original": {
+        "path": "../shared/extraPackages",
+        "type": "path"
+      },
+      "parent": []
     },
     "xwayland-satellite-stable": {
       "flake": false,
