@@ -7,15 +7,27 @@
 }:
 
 let
-  name = pname;
+  # name = pname;
+  # pname = "winboat";
+  # version = "0.7.3";
+  #
+  # winboatAppimage = {
+  #   inherit pname version;
+  #   src = fetchurl {
+  #     url = "https://github.com/TibixDev/winboat/releases/download/v${version}/winboat-${version}-x86_64.AppImage";
+  #     hash = "sha256-Jy0OiTOYWzezyOgQe8PZWpi7Hh4q0qJsqWzZzAjxtyQ=";
+  #   };
+  # };
+
+  sources = import ./sources.nix;
+  inherit (sources.winboat) version;
   pname = "winboat";
-  version = "0.7.3";
 
   winboatAppimage = {
     inherit pname version;
     src = fetchurl {
       url = "https://github.com/TibixDev/winboat/releases/download/v${version}/winboat-${version}-x86_64.AppImage";
-      hash = "sha256-Jy0OiTOYWzezyOgQe8PZWpi7Hh4q0qJsqWzZzAjxtyQ=";
+      inherit (sources.winboat) sha256;
     };
   };
 
