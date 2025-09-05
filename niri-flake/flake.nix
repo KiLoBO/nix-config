@@ -46,6 +46,8 @@
         ./modules/sddm.nix
         # Nix-ld
         ../shared/nix-ld.nix
+        # Winboat
+        ../shared/extraPackages/winboat
         niri.nixosModules.niri
         catppuccin.nixosModules.catppuccin
 
