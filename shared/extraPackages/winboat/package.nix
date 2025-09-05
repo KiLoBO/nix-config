@@ -19,7 +19,7 @@ let
   #   };
   # };
 
-  sources = import ./sources.nix;
+  sources = import ./_sources/generated.nix;
   inherit (sources.winboat) version;
   name = pname;
   pname = "winboat";

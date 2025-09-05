@@ -1,0 +1,23 @@
+{
+    "winboat": {
+        "cargoLocks": null,
+        "date": null,
+        "extract": null,
+        "name": "winboat",
+        "passthru": null,
+        "pinned": false,
+        "src": {
+            "deepClone": false,
+            "fetchSubmodules": false,
+            "leaveDotGit": false,
+            "name": null,
+            "owner": "TibixDev",
+            "repo": "winboat",
+            "rev": "v0.7.3",
+            "sha256": "sha256-9Cb62AInb+896vYbvtacKfSx0qhflZTb8/gTL6iUyhw=",
+            "sparseCheckout": [],
+            "type": "github"
+        },
+        "version": "v0.7.3"
+    }
+}
