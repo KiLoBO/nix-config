@@ -19,7 +19,7 @@ let
   #   };
   # };
 
-  sources = import ./sources.toml;
+  sources = import ./sources.nix;
   inherit (sources.winboat) version;
   name = pname;
   pname = "winboat";
