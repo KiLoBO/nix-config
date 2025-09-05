@@ -38,10 +38,7 @@
         { nixpkgs.overlays = [ 
             niri.overlays.niri 
         ];}
-        { environment.systemPackages = [ 
-            quickshell.packages.x86_64-linux.default
-            winboat.packages.x86_64-linux.default
-          ]; }
+        { environment.systemPackages = [ quickshell.packages.x86_64-linux.default ]; }
         # Base sys config (not env specific)
         ../configuration.nix
         # ENV specific sys config
