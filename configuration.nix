@@ -14,7 +14,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 5;
-  boot.kernelModules = [ "iptable_nat" ];
 
   networking.hostName = "nixpad"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -115,14 +114,11 @@
     maple-mono.Normal-NF
     killall
     nix-index
+    docker-compose
 
     # smartcard
     pcsc-tools
 
-    # winboat
-    freerdp
-    docker-compose
-    appimage-run
     # Rust
     rustup
 
@@ -216,5 +212,4 @@
 
   programs.zsh.enable = true;
 
-  virtualisation.docker.enable = true;
 }
