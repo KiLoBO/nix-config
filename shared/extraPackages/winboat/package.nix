@@ -21,6 +21,7 @@ let
 
   sources = import ./sources.nix;
   inherit (sources.winboat) version;
+  name = pname;
   pname = "winboat";
 
   winboatAppimage = {
