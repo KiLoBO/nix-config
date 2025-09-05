@@ -20,7 +20,7 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    winboat.url = "path:../shared/extraPackages/winboat/default.nix";
+    winboat.url = "path:../shared/extraPackages/winboat";
   };
 
   outputs = { self, nixpkgs, home-manager, catppuccin, niri, quickshell, nixpkgs-unstable, ... }@inputs:
