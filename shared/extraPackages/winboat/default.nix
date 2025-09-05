@@ -32,5 +32,5 @@
         }
       )
     ];
-
+  meta.name = "winboat";
 }
