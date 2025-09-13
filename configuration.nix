@@ -155,6 +155,13 @@
 
   # --------------------------------------
 
+  # Virtualisation
+  programs.virt-manager.enable = true;
+  virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
+
+  users.groups.libvirtd.members = ["david"];
+
   # Smartcard
   services.pcscd.enable = true;
 
