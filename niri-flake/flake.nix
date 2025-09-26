@@ -20,7 +20,11 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    winboat.url = "path:../shared/extraPackages";
+    # winboat.url = "path:../shared/extraPackages";
+    winboat = {
+      url = "github:TibixDev/winboat";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, home-manager, catppuccin, niri, quickshell, nixpkgs-unstable, winboat, ... }@inputs:
@@ -39,6 +43,7 @@
             niri.overlays.niri 
         ];}
         { environment.systemPackages = [ quickshell.packages.x86_64-linux.default ]; }
+        { services.winboat.enable = true; }
         # Base sys config (not env specific)
         ../configuration.nix
         # ENV specific sys config
@@ -49,7 +54,7 @@
         ../shared/nix-ld.nix
         niri.nixosModules.niri
         catppuccin.nixosModules.catppuccin
-        winboat.nixosModules.winboat
+        winboat.nixosModules.x86_64-linux.default
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
