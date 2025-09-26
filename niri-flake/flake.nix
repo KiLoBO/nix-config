@@ -20,7 +20,6 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # winboat.url = "path:../shared/extraPackages";
     winboat = {
       url = "github:TibixDev/winboat";
       inputs.nixpkgs.follows = "nixpkgs";
