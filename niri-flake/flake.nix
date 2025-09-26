@@ -26,7 +26,7 @@
     # };
 
     extraPackages = {
-      url = "path:../shared/extraPackages"
+      url = "path:../shared/extraPackages";
     };
   };
 
