@@ -1,21 +1,29 @@
-{ config, lib, pkgs, ... }:
-
+{ ... }:
 {
-  nixpkgs.overlays = [
-    (final: super: {
-      winboat = final.callPackage ./package.nix { };
-    })
-  ];
+  inputs.winboat = {
+    url = "github:TibixDev/winboat";
+    inputs.nixpkgs.follows = "nixpkgs";
+  };
 
-  boot.kernelModules = [
-    "ip_tables"
-    "iptable_nat"
-  ];
+  outputs.nixosModules = 
+    { inputs, ... }:
+    [
+      inputs.winboat.nixosModules.x86_64-linux.default
 
-  environment.systemPackages = with pkgs; [
-    freerdp
-    winboat
-  ];
+      (
+        {
+          config,
+          lib,
+          pkgs,
+          ...
+        }:
+        {
+          services.winboat.enable = true;
 
-  virtualisation.docker.enable = true; 
+          users.users = lib.mapAttrs (user: _: {
+            extraGroups = [ "docker" ];
+          });
+        }
+      )
+    ]
 }
