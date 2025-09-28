@@ -41,6 +41,7 @@
     pkgs.jellyfin-media-player
     pkgs.discord
     pkgs.rustscan
+    pkgs.vivid
 
     # AstroNVIM Required
     pkgs.ripgrep

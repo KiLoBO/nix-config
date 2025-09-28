@@ -15,19 +15,20 @@
     GTK_THEME = "Colloid-Pink-Dark-Catppuccin";
   };
 
+  # programs.vivid.enable = true;
   # Set flavor and enable globally
-  catppuccin = {
-    enable = true;
-    accent = "lavender";
-    flavor = "mocha";
-    zsh-syntax-highlighting.enable = false;
-    vscode.profiles.default.enable = false;
-    gtk = {
-      icon.enable = true;
-      icon.accent = "lavender";
-      icon.flavor = "mocha";
-    };
-  };
+  # catppuccin = {
+  #   enable = true;
+  #   accent = "lavender";
+  #   flavor = "mocha";
+  #   zsh-syntax-highlighting.enable = false;
+  #   vscode.profiles.default.enable = false;
+  #   gtk = {
+  #     icon.enable = true;
+  #     icon.accent = "lavender";
+  #     icon.flavor = "mocha";
+  #   };
+  # };
 
   gtk = {
     enable = true;

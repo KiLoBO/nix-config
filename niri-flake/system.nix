@@ -49,9 +49,9 @@
     ]);
 
   # Theming
-  catppuccin.enable = true;
-  catppuccin.flavor = "mocha";
-  catppuccin.accent = "lavender";
-  catppuccin.sddm.enable = false;
+  # catppuccin.enable = true;
+  # catppuccin.flavor = "mocha";
+  # catppuccin.accent = "lavender";
+  # catppuccin.sddm.enable = false;
 
 }
