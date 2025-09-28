@@ -27,31 +27,13 @@
     libsecret
     niri-stable
 
-    # Core Qt components
-    # qt6.qtbase
-    # qt6.qtdeclarative
-    # qt6.qttools
-    #
-    # Extra Qt packages needed for QuickShell
-    # libsForQt5.qt5.qtsvg
-    # libsForQt5.qt5.qtimageformats
-    # libsForQt5.qt5.qtmultimedia
-    # qt6Packages.qt5compat
-
     qt6Packages.qt5compat
     libsForQt5.qt5.qtgraphicaleffects
     kdePackages.qtbase
     kdePackages.qtdeclarative
     kdePackages.qtstyleplugin-kvantum
     matugen
-] ++ (with pkgs-unstable; [
-      nmgui
-    ]);
-
-  # Theming
-  # catppuccin.enable = true;
-  # catppuccin.flavor = "mocha";
-  # catppuccin.accent = "lavender";
-  # catppuccin.sddm.enable = false;
-
+  ] ++ (with pkgs-unstable; [
+    nmgui
+  ]);
 }

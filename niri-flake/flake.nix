@@ -47,7 +47,7 @@
         ];}
         { environment.systemPackages = [ quickshell.packages.x86_64-linux.default ]; }
         { services.winboat.enable = true; }
-        { stylix.enable = true; }
+        # { stylix.enable = true; }
         # Base sys config (not env specific)
         ../configuration.nix
         # ENV specific sys config
