@@ -24,9 +24,13 @@
       url = "github:TibixDev/winboat";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    stylix = {
+      url = "github:nix-community/stylix/release-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, niri, quickshell, nixpkgs-unstable, winboat, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, catppuccin, niri, quickshell, nixpkgs-unstable, winboat, stylix, ... }@inputs:
   {
     nixosConfigurations.nixpad = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -43,6 +47,7 @@
         ];}
         { environment.systemPackages = [ quickshell.packages.x86_64-linux.default ]; }
         { services.winboat.enable = true; }
+        { stylix.enable = true; }
         # Base sys config (not env specific)
         ../configuration.nix
         # ENV specific sys config
@@ -51,8 +56,9 @@
         ./modules/sddm.nix
         # Nix-ld
         ../shared/nix-ld.nix
+        ../shared/themes/catppuccin/stylix-sys.nix
         niri.nixosModules.niri
-        # catppuccin.nixosModules.catppuccin
+        stylix.nixosModules.stylix
         winboat.nixosModules.x86_64-linux.default
         home-manager.nixosModules.home-manager
         {
