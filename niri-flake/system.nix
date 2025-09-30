@@ -35,5 +35,6 @@
     matugen
   ] ++ (with pkgs-unstable; [
     nmgui
+    rio
   ]);
 }
