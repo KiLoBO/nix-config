@@ -12,48 +12,48 @@
 
   # ----------------------------------------------------------------------------
 
-  home.packages = [
-    pkgs.fastfetch
-    pkgs.nil
-    pkgs.nixfmt-rfc-style
-    pkgs.starship
-    pkgs.btop
-    pkgs.kitty
-    pkgs.nitch
-    pkgs.nh
-    pkgs.zellij
-    pkgs.obsidian
-    pkgs.pipes-rs
-    pkgs.wl-clipboard
-    pkgs.brightnessctl
-    pkgs.yazi
-    pkgs.xfce.thunar
-    pkgs.xdg-utils
-    pkgs.imagemagick
-    pkgs.hyprpicker
-    pkgs.webcord
-    pkgs.manix
-    pkgs.tree
-    pkgs.gtk-engine-murrine
-    pkgs.glib
-    pkgs.unzip
-    pkgs.claude-code
-    pkgs.jellyfin-media-player
-    pkgs.discord
-    pkgs.rustscan
-    pkgs.vivid
+  home.packages = with pkgs; [
+    fastfetch
+    nil
+    nixfmt-rfc-style
+    starship
+    btop
+    kitty
+    nitch
+    nh
+    zellij
+    obsidian
+    pipes-rs
+    wl-clipboard
+    brightnessctl
+    yazi
+    xfce.thunar
+    xdg-utils
+    imagemagick
+    hyprpicker
+    webcord
+    manix
+    tree
+    gtk-engine-murrine
+    glib
+    unzip
+    claude-code
+    jellyfin-media-player
+    discord
+    rustscan
+    vivid
 
     # AstroNVIM Required
-    pkgs.ripgrep
-    pkgs.lazygit
+    ripgrep
+    lazygit
 
     # LSP
-    pkgs.lua-language-server
-    pkgs.yaml-language-server
-    pkgs.ruff
-    pkgs.selene
-    pkgs.stylua
-    pkgs.dotenv-linter
+    lua-language-server
+    yaml-language-server
+    ruff
+    selene
+    stylua
+    dotenv-linter
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
