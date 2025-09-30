@@ -26,6 +26,7 @@
     xwayland-satellite
     libsecret
     niri-stable
+    manix
 
     qt6Packages.qt5compat
     libsForQt5.qt5.qtgraphicaleffects
