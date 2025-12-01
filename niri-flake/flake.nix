@@ -2,10 +2,10 @@
   description = "Niri Flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager = {
-      url = "github:nix-community/home-manager/release-25.05";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     niri = {
@@ -20,17 +20,17 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    winboat = {
-      url = "github:TibixDev/winboat";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # winboat = {
+    #   url = "github:TibixDev/winboat";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
     stylix = {
-      url = "github:nix-community/stylix/release-25.05";
+      url = "github:nix-community/stylix/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, niri, quickshell, nixpkgs-unstable, winboat, stylix, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, catppuccin, niri, quickshell, nixpkgs-unstable, stylix, ... }@inputs:
   {
     nixosConfigurations.nixpad = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
@@ -52,7 +52,7 @@
             ];
           })
         # { environment.systemPackages = [ quickshell.packages.x86_64-linux.default ]; }
-        { services.winboat.enable = true; }
+        # { services.winboat.enable = true; }
         # { stylix.enable = true; }
         # Base sys config (not env specific)
         ../configuration.nix
@@ -65,7 +65,7 @@
         ../shared/themes/catppuccin/stylix-sys.nix
         niri.nixosModules.niri
         stylix.nixosModules.stylix
-        winboat.nixosModules.x86_64-linux.default
+        # winboat.nixosModules.x86_64-linux.default
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;

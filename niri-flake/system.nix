@@ -17,6 +17,10 @@
   programs.dconf.enable = true;
   qt.enable = true;
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "qtwebengine-5.15.19"
+  ];
+
   environment.systemPackages = with pkgs; [
     networkmanagerapplet
     blueman
@@ -35,7 +39,7 @@
     kdePackages.qtstyleplugin-kvantum
     matugen
   ] ++ (with pkgs-unstable; [
-    nmgui
+    # nmgui
     rio
   ]);
 }

@@ -42,6 +42,8 @@
     discord
     rustscan
     vivid
+    nmgui
+    winboat
 
     # AstroNVIM Required
     ripgrep
