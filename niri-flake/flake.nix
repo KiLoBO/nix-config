@@ -20,10 +20,6 @@
       url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # winboat = {
-    #   url = "github:TibixDev/winboat";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
     stylix = {
       url = "github:nix-community/stylix/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -51,9 +47,6 @@
               quickshell.packages.x86_64-linux.default
             ];
           })
-        # { environment.systemPackages = [ quickshell.packages.x86_64-linux.default ]; }
-        # { services.winboat.enable = true; }
-        # { stylix.enable = true; }
         # Base sys config (not env specific)
         ../configuration.nix
         # ENV specific sys config
@@ -65,7 +58,6 @@
         ../shared/themes/catppuccin/stylix-sys.nix
         niri.nixosModules.niri
         stylix.nixosModules.stylix
-        # winboat.nixosModules.x86_64-linux.default
         home-manager.nixosModules.home-manager
         {
           home-manager.useGlobalPkgs = true;
@@ -77,7 +69,6 @@
             imports = [
               ../shared/home-base.nix
               ./home-niri.nix
-              # catppuccin.homeModules.catppuccin
               ../shared/themes/catppuccin
             ];
           };
