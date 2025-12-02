@@ -41,5 +41,6 @@
   ] ++ (with pkgs-unstable; [
     # nmgui
     rio
+    winboat
   ]);
 }
