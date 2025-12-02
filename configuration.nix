@@ -127,7 +127,7 @@
     gccgo15
     nodejs
     git
-    python3Full
+    python3
 
   ];
 
