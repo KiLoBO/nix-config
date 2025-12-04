@@ -58,6 +58,7 @@
     dotenv-linter
 
     # python
+    uv
     python313Packages.textual
     python313Packages.textual-dev
     python313Packages.rich
@@ -93,7 +94,7 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
-    PATH = "$PATH:/home/david/.cargo/bin:/home/david/.local/share/nvim/mason/bin";
+    PATH = "$PATH:/home/david/.local/bin:/home/david/.cargo/bin:/home/david/.local/share/nvim/mason/bin";
     TERMINAL = "kitty";
   };
 
