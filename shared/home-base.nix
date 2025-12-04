@@ -43,7 +43,7 @@
     rustscan
     vivid
     nmgui
-    # winboat
+    calibre
 
     # AstroNVIM Required
     ripgrep
