@@ -86,6 +86,7 @@
       "networkmanager"
       "wheel"
       "docker"
+      "input"
     ];
     packages = with pkgs; [
       # kdePackages.kate
@@ -222,4 +223,9 @@
 
   programs.zsh.enable = true;
 
+  # Wacom tablet
+  # hardware.opentabletdriver.enable = true;
+  # hardware.uinput.enable = true;
+  # boot.kernelModules = [ "uinput" ];
+  # boot.blacklistedKernelModules = [ "wacom" "hid_wacom" ];
 }

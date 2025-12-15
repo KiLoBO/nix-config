@@ -78,6 +78,11 @@
         scroll-method = "two-finger";
         disabled-on-external-mouse = true;
       };
+
+      tablet = {
+        enable = true;
+        map-to-output = "eDP-1";
+      };
     };
 
     cursor = {
