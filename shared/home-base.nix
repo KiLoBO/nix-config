@@ -1,4 +1,8 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  ...
+}:
 
 {
   home.username = "david";
@@ -44,6 +48,7 @@
     vivid
     nmgui
     calibre
+    zed-editor
 
     # AstroNVIM Required
     ripgrep
@@ -56,6 +61,7 @@
     selene
     stylua
     dotenv-linter
+    nixd
 
     # python
     uv
@@ -99,7 +105,7 @@
   };
 
   # ----------------------------------------------------------------------------
-  
+
   programs.fuzzel.enable = true;
   programs.fuzzel.settings = {
     colors.background = "24273add";
@@ -165,7 +171,7 @@
           version = "0.4.22";
           sha256 = "j3V03Aa1mHO9rny3/hXmDbs3fmruqyzNzwFjiOlnaMU=";
         }
-      ];    
+      ];
   };
 
 }

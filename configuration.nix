@@ -2,7 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  pkgs-unstable,
+  ...
+}:
 
 {
   imports = [
@@ -106,32 +111,37 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim
-    vscode
-    zsh
-    neovim
-    tailscale
-    trayscale
-    maple-mono.Normal-NF
-    killall
-    nix-index
-    docker-compose
+  environment.systemPackages =
+    with pkgs;
+    [
+      vim
+      vscode
+      zsh
+      neovim
+      tailscale
+      trayscale
+      maple-mono.Normal-NF
+      killall
+      nix-index
+      docker-compose
 
-    # smartcard
-    pcsc-tools
+      # smartcard
+      pcsc-tools
 
-    # Rust
-    rustup
+      # Rust
+      rustup
 
-    # AstroNVIM Required
-    gccgo15
-    # nodejs
-    nodePackages_latest.nodejs
-    git
-    python3
+      # AstroNVIM Required
+      gccgo15
+      # nodejs
+      nodePackages_latest.nodejs
+      git
+      python3
 
-  ];
+    ]
+    ++ (with pkgs-unstable; [
+      ty
+    ]);
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -164,7 +174,7 @@
   virtualisation.spiceUSBRedirection.enable = true;
   virtualisation.docker.enable = true;
 
-  users.groups.libvirtd.members = ["david"];
+  users.groups.libvirtd.members = [ "david" ];
 
   # Smartcard
   services.pcscd.enable = true;
