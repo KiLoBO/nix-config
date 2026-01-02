@@ -174,4 +174,56 @@
       ];
   };
 
+  programs.zed-editor = {
+    enable = true;
+    extensions = [
+      "Nix"
+      "Docker Compose"
+      "Catppuccin Blur"
+      "Catppuccin Icons"
+    ];
+    userSettings = {
+      theme = {
+        mode = "dark";
+        dark = "Catppuccin Frappé (Blur) [Heavy]";
+      };
+      icon_theme = "Catppuccin Frappé";
+      base_keymap = "VSCode";
+      ui_font_size = 16;
+      buffer_font_size = 16;
+      features = {
+        edit_prediction_provider = "none";
+      };
+
+      terminal = {
+        detect_venv = {
+          on = {
+            directories = [
+              ".env"
+              "env"
+              ".venv"
+              "venv"
+            ];
+            activate_script = "default";
+          };
+        };
+      };
+
+      languages = {
+        "Python" = {
+          language_servers = [
+            "ty"
+            "!basedpyright"
+            "..."
+          ];
+        };
+        "Nix" = {
+          language_servers = [
+            "nil"
+            "!nixd"
+          ];
+        };
+      };
+    };
+  };
 }
