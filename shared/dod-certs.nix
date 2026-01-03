@@ -7,35 +7,65 @@
 
 let
   dodCertsPackage = pkgs.stdenv.mkDerivation {
-    name = "dod-certificates";
-    src = pkgs.fetchurl {
-      url = "https://dl.dod.cyber.mil/wp-content/uploads/pki-pke/zip/unclass-certificates_pkcs7_DoD.zip";
-      sha256 = "sha256-04apnzxyj12j04qvh3sjq71zq1vc417nlb6xrqimipsjwzdmln9j";
-    };
-    nativeBuildInputs = [
-      pkgs.unzip
-      pkgs.openssl
-    ];
+    pname = "dod-certificates";
+    version = "2026";
 
-    unpackPhase = ''
-      unzip $src -d extracted
-    '';
-    installPhase = ''
-      mkdir -p $out/certs
-      # Convert PKCS7 to PEM
-      for f in extracted/*.p7b; do
+    src = pkgs.fetchzip {
+      url = "https://dl.dod.cyber.mil/wp-content/uploads/pki-pke/zip/unclass-certificates_pkcs7_DoD.zip";
+      sha256 = "sha256-EZIHVEwK+rWHa1cFSrN3w4OQeWKQxTlqfRSyT804Obc=";
+      stripRoot = false;
+    };
+
+    nativeBuildInputs = [ pkgs.openssl ];
+
+    dontUnpack = true;
+
+    buildPhase = ''
+      echo "Contents of src:"
+      ls -la $src
+
+      # Go into the actual directory with the certificates
+      cd $src/Certificates_PKCS7_v5_14_DoD
+
+      echo "Files in certificate directory:"
+      ls -la
+
+      # Process .der.p7b files
+      for f in *.der.p7b; do
         if [ -f "$f" ]; then
-            name=$(basename "$f" .p7b)
-            openssl pkcs7 -in "$f" -print_certs -out "$out/certs/$name.pem" 2>/dev/null || true
+          echo "Processing $f..."
+          openssl pkcs7 -inform DER -in "$f" -print_certs >> /build/dod-certificates.pem
         fi
       done
+
+      # Also process .pem.p7b if it exists
+      for f in *.pem.p7b; do
+        if [ -f "$f" ]; then
+          echo "Processing $f..."
+          openssl pkcs7 -in "$f" -print_certs >> /build/dod-certificates.pem
+        fi
+      done
+
+      echo "Extraction complete. Lines in output: $(wc -l < /build/dod-certificates.pem)"
+    '';
+
+    installPhase = ''
+      mkdir -p $out
+
+      if [ -f "/build/dod-certificates.pem" ] && [ -s "/build/dod-certificates.pem" ]; then
+        cp /build/dod-certificates.pem $out/dod-certificates.pem
+        echo "Successfully created certificate bundle with $(wc -l < $out/dod-certificates.pem) lines"
+      else
+        echo "ERROR: No certificates extracted!"
+        exit 1
+      fi
     '';
   };
 in
 {
-  security.pki.certificateFiles = lib.mapAttrsToList (name: _: "${dodCertsPackage}/certs/${name}") (
-    builtins.readDir "${dodCertsPackage}/certs"
-  );
+  security.pki.certificateFiles = [
+    "${dodCertsPackage}/dod-certificates.pem"
+  ];
 
   programs.firefox = {
     enable = true;
