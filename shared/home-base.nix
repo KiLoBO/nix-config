@@ -187,6 +187,10 @@
         mode = "dark";
         dark = "Catppuccin Frappé (Blur) [Heavy]";
       };
+      buffer_font_family = "Maple Mono NF";
+      buffer_font_features = {
+        calt = true;
+      };
       icon_theme = "Catppuccin Frappé";
       base_keymap = "VSCode";
       ui_font_size = 16;
@@ -206,6 +210,13 @@
             ];
             activate_script = "default";
           };
+        };
+      };
+      theme_overrides = {
+        "Catppuccin Frappé (Blur) [Heavy]" = {
+          syntax.boolean.font_style = "italic";
+          syntax.emphasis.font_style = "italic";
+          syntax.keyword.font_style = "italic";
         };
       };
 
