@@ -73,6 +73,8 @@
           ../shared/nix-ld.nix
           ../shared/themes/catppuccin/stylix-sys.nix
 
+          # DOD root CA and CAC stuff
+          ../shared/cac-read.nix
           ../shared/dod-certs.nix
           niri.nixosModules.niri
           stylix.nixosModules.stylix
