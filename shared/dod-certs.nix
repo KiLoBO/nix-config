@@ -21,14 +21,7 @@ let
     dontUnpack = true;
 
     buildPhase = ''
-      echo "Contents of src:"
-      ls -la $src
-
-      # Go into the actual directory with the certificates
       cd $src/Certificates_PKCS7_v5_14_DoD
-
-      echo "Files in certificate directory:"
-      ls -la
 
       # Process .der.p7b files
       for f in *.der.p7b; do
@@ -54,9 +47,8 @@ let
 
       if [ -f "/build/dod-certificates.pem" ] && [ -s "/build/dod-certificates.pem" ]; then
         cp /build/dod-certificates.pem $out/dod-certificates.pem
-        echo "Successfully created certificate bundle with $(wc -l < $out/dod-certificates.pem) lines"
       else
-        echo "ERROR: No certificates extracted!"
+        echo "ERROR: No certificates extracted"
         exit 1
       fi
     '';
