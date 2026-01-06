@@ -49,6 +49,7 @@
     nmgui
     calibre
     zed-editor
+    orca-slicer
 
     # AstroNVIM Required
     ripgrep
