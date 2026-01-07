@@ -107,6 +107,24 @@
 
   # ----------------------------------------------------------------------------
 
+  programs.kitty = {
+    enable = true;
+    font = {
+      name = "JetBrainsMono Nerd Font";
+      size = 12;
+    };
+    settings = {
+      bold_font = "auto";
+      italic_font = "auto";
+      bold_italic_font = "auto";
+      enable_audio_bell = "no";
+      window_padding_width = 15;
+      cursor_trail = 1;
+      confirm_os_window_close = 0;
+    };
+    themeFile = "Catppuccin-Macchiato";
+  };
+
   programs.fuzzel.enable = true;
   programs.fuzzel.settings = {
     colors.background = "24273add";
