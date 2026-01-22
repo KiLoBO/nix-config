@@ -16,8 +16,6 @@
     pcsc-tools # Tools for testing smart card readers
     ccid # USB smart card reader driver
 
-    # Optional: GUI tools for managing certificates
-    gpa # GNU Privacy Assistant (certificate manager)
   ];
 
   # Enable CAC support in Firefox

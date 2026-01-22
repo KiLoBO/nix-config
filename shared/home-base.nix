@@ -50,6 +50,7 @@
     calibre
     zed-editor
     orca-slicer
+    freerdp
 
     # AstroNVIM Required
     ripgrep
