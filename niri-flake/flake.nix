@@ -16,12 +16,16 @@
       url = "github:catppuccin/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    quickshell = {
-      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     stylix = {
       url = "github:nix-community/stylix/release-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    dgop = {
+      url = "github:AvengeMedia/dgop";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -33,7 +37,6 @@
       home-manager,
       catppuccin,
       niri,
-      quickshell,
       nixpkgs-unstable,
       stylix,
       ...
@@ -54,15 +57,6 @@
               niri.overlays.niri
             ];
           }
-
-          (
-            { pkgs, ... }:
-            {
-              environment.systemPackages = [
-                quickshell.packages.x86_64-linux.default
-              ];
-            }
-          )
           # Base sys config (not env specific)
           ../configuration.nix
           # ENV specific sys config
@@ -87,6 +81,8 @@
 
             home-manager.users.david = {
               imports = [
+                inputs.dms.homeModules.dank-material-shell
+                inputs.dms.homeModules.niri
                 ../shared/home-base.nix
                 ./home-niri.nix
                 ../shared/themes/catppuccin
