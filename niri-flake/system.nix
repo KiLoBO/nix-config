@@ -30,8 +30,6 @@
   environment.systemPackages =
     with pkgs;
     [
-      networkmanagerapplet
-      blueman
       libnotify
       xdg-desktop-portal-gnome
       xdg-desktop-portal-gtk

@@ -61,14 +61,25 @@
       DISPLAY = ":0";
     };
 
-    outputs."eDP-1" = {
-      enable = true;
-      mode = {
-        width = 1920;
-        height = 1080;
-        refresh = 60.0;
+    outputs = {
+      "eDP-1" = {
+        enable = true;
+        mode = {
+          width = 1920;
+          height = 1080;
+          refresh = 60.0;
+        };
+        scale = 1.0;
       };
-      scale = 1.0;
+      "DP-4" = {
+        enable = true;
+        mode = {
+          width = 1920;
+          height = 1080;
+          refresh = 60.0;
+        };
+        scale = 1.0;
+      };
     };
 
     spawn-at-startup = [
@@ -114,6 +125,10 @@
         natural-scroll = false;
         scroll-method = "two-finger";
         disabled-on-external-mouse = true;
+      };
+
+      mouse = {
+        accel-profile = "flat";
       };
 
       tablet = {

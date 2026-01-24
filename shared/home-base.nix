@@ -205,7 +205,8 @@
     userSettings = {
       theme = {
         mode = "dark";
-        dark = "Catppuccin Frappé (Blur) [Heavy]";
+        # dark = "Catppuccin Frappé (Blur) [Heavy]";
+        dark = "Catppuccin Frappé";
       };
       buffer_font_family = "Maple Mono NF";
       buffer_font_features = {
@@ -234,6 +235,11 @@
       };
       theme_overrides = {
         "Catppuccin Frappé (Blur) [Heavy]" = {
+          syntax.boolean.font_style = "italic";
+          syntax.emphasis.font_style = "italic";
+          syntax.keyword.font_style = "italic";
+        };
+        "Catppuccin Frappé" = {
           syntax.boolean.font_style = "italic";
           syntax.emphasis.font_style = "italic";
           syntax.keyword.font_style = "italic";
