@@ -76,7 +76,7 @@
         mode = {
           width = 1920;
           height = 1080;
-          refresh = 60.0;
+          refresh = 120.0;
         };
         scale = 1.0;
       };
