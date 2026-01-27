@@ -200,6 +200,7 @@
       "Docker Compose"
       "Catppuccin Blur"
       "Catppuccin Icons"
+      "Material Icon Theme"
     ];
     userSettings = {
       theme = {
@@ -211,7 +212,8 @@
       buffer_font_features = {
         calt = true;
       };
-      icon_theme = "Catppuccin Frappé";
+      icon_theme = "Material Icon Theme";
+      file_icons = true;
       base_keymap = "VSCode";
       ui_font_size = 16;
       buffer_font_size = 16;
