@@ -25,6 +25,7 @@
       nixpkgs-unstable,
       dms,
       dgop,
+      nix-monitor,
     }@inputs:
     {
       nixosModules = {
