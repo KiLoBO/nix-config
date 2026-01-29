@@ -77,6 +77,7 @@
             };
             programs.nix-monitor = {
               enable = true;
+              nixpkgsChannel = "nixos-25.11";
               rebuildCommand = [
                 "bash"
                 "-c"
