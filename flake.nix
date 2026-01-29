@@ -93,6 +93,6 @@
           };
       };
 
-      inherit (inputs) dms dgop;
+      inherit (inputs) dms dgop nix-monitor;
     };
 }
