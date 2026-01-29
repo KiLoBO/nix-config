@@ -12,6 +12,10 @@
       url = "github:AvengeMedia/dgop";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-monitor = {
+      url = "github:antonjah/nix-monitor";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -61,11 +65,22 @@
             ...
           }:
           {
-            imports = [ inputs.dms.homeModules.dank-material-shell ];
+            imports = [
+              inputs.dms.homeModules.dank-material-shell
+              inputs.nix-monitor.homeManagerModules.default
+            ];
             programs.dank-material-shell = {
               enable = lib.mkDefault true;
               enableSystemMonitoring = lib.mkDefault true;
               dgop.package = inputs.dgop.packages.${pkgs.system}.default;
+            };
+            programs.nix-monitor = {
+              enable = true;
+              rebuildCommand = [
+                "bash"
+                "-c"
+                "nh os switch -a $NH_FLAKE"
+              ];
             };
           };
 
