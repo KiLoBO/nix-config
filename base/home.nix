@@ -50,6 +50,9 @@
     zed-editor
     orca-slicer
     freerdp
+    libreoffice-fresh
+    hunspell
+    hunspellDicts.en_US-large
 
     # AstroNVIM Required
     ripgrep
