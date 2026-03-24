@@ -169,6 +169,8 @@
 
   # --------------------------------------
 
+  programs.steam.enable = true;
+
   # Virtualisation
   programs.virt-manager.enable = true;
   virtualisation.libvirtd.enable = true;

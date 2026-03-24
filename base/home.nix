@@ -111,7 +111,6 @@
 
   # ----------------------------------------------------------------------------
 
-  programs.steam.enable = true;
   programs.kitty = {
     enable = true;
     font = {
