@@ -53,6 +53,7 @@
     libreoffice-fresh
     hunspell
     hunspellDicts.en_US-large
+    protonup-qt
 
     # AstroNVIM Required
     ripgrep
@@ -110,6 +111,7 @@
 
   # ----------------------------------------------------------------------------
 
+  programs.steam.enable = true;
   programs.kitty = {
     enable = true;
     font = {
