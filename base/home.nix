@@ -114,12 +114,12 @@
   programs.kitty = {
     enable = true;
     font = {
-      name = "JetBrainsMono Nerd Font";
+      name = "Maple Mono NF";
       size = 12;
     };
     settings = {
       bold_font = "auto";
-      italic_font = "auto";
+      italic_font = "family='Maple Mono NF' features=+calt";
       bold_italic_font = "auto";
       enable_audio_bell = "no";
       window_padding_width = 15;
