@@ -124,8 +124,8 @@
       killall
       nix-index
       docker-compose
-      networkmanager
-      wireguard-tools
+      netbird
+      netbird-ui
 
       # smartcard
       pcsc-tools
