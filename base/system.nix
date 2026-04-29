@@ -124,6 +124,8 @@
       killall
       nix-index
       docker-compose
+      networkmanager
+      wireguard-tools
 
       # smartcard
       pcsc-tools
