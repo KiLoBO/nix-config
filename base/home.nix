@@ -54,6 +54,7 @@
     hunspell
     hunspellDicts.en_US-large
     protonup-qt
+    go
 
     # AstroNVIM Required
     ripgrep
