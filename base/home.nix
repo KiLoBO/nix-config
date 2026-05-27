@@ -31,6 +31,8 @@
     brightnessctl
     yazi
     xfce.thunar
+    xfce.thunar-archive-plugin
+    kdePackages.ark
     xdg-utils
     imagemagick
     hyprpicker
