@@ -172,7 +172,10 @@
   # --------------------------------------
 
   programs.steam.enable = true;
-
+  programs.thunar.plugins = with pkgs.xfce; [
+    thunar-archive-plugin
+    thunar-volman
+  ];
   services.netbird.clients.wt0 = {
     port = 51821;
     ui.enable = true;

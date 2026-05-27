@@ -132,11 +132,6 @@
     themeFile = "Catppuccin-Macchiato";
   };
 
-  programs.thunar.plugins = with pkgs.xfce; [
-    thunar-archive-plugin
-    thunar-volman
-  ];
-
   programs.fuzzel.enable = true;
   programs.fuzzel.settings = {
     colors.background = "24273add";
