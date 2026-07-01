@@ -19,7 +19,7 @@
   home.packages = with pkgs; [
     fastfetch
     nil
-    nixfmt-rfc-style
+    nixfmt
     starship
     btop
     kitty
@@ -30,8 +30,8 @@
     wl-clipboard
     brightnessctl
     yazi
-    xfce.thunar
-    xfce.thunar-archive-plugin
+    thunar
+    thunar-archive-plugin
     kdePackages.ark
     xdg-utils
     imagemagick
