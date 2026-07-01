@@ -136,7 +136,7 @@
       # AstroNVIM Required
       gccgo15
       # nodejs
-      nodePackages_latest.nodejs
+      nodejs
       git
       python3
 
