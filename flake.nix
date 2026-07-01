@@ -2,7 +2,7 @@
   description = "Shared Sys and Home configuration.";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     dms = {
       url = "github:AvengeMedia/DankMaterialShell/stable";
@@ -77,7 +77,7 @@
             };
             programs.nix-monitor = {
               enable = true;
-              nixpkgsChannel = "nixos-25.11";
+              nixpkgsChannel = "nixos-26.05";
               rebuildCommand = [
                 "bash"
                 "-c"
