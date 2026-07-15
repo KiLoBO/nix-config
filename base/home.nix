@@ -57,6 +57,7 @@
     hunspellDicts.en_US-large
     protonup-qt
     go
+    filezilla
 
     # AstroNVIM Required
     ripgrep
