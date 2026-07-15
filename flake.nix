@@ -37,8 +37,8 @@
         base =
           { config, pkgs, ... }:
           {
-            imports = [
-              ./base/system.nix
+            imports = [ ./base/system.nix ];
+            environment.systemPackages = [
               inputs.helix-notes.packages.${pkgs.system}.default
             ];
           };
