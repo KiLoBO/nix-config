@@ -50,7 +50,7 @@
         catppuccin = ./themes/catppuccin/stylix-sys.nix;
 
         all-features =
-          { ... }:
+          { pkgs, ... }:
           {
             imports = [
               ./base/system.nix
@@ -58,6 +58,9 @@
               ./modules/dod/dod-certs.nix
               ./modules/dod/cac-read.nix
               ./modules/nix-ld
+            ];
+            environment.systemPackages = [
+              inputs.helix-notes.packages.${pkgs.system}.default
             ];
           };
       };
