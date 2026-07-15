@@ -16,6 +16,10 @@
       url = "github:antonjah/nix-monitor";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    helix-notes = {
+      url = "git+https://codeberg.org/ArkHost/HelixNotes";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -26,13 +30,17 @@
       dms,
       dgop,
       nix-monitor,
+      helix-notes,
     }@inputs:
     {
       nixosModules = {
         base =
           { config, pkgs, ... }:
           {
-            imports = [ ./base/system.nix ];
+            imports = [
+              ./base/system.nix
+              inputs.helix-notes.packages.${pkgs.system}.default
+            ];
           };
 
         sddm = ./modules/sddm;
