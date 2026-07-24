@@ -80,21 +80,21 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": [
-          "nixpkgs-unstable"
+          "nixpkgs"
         ]
       },
       "locked": {
-        "lastModified": 1784545775,
-        "narHash": "sha256-P51UHU2UftmgOhKhOQnOkIhm8ZFsesLbBBW92+q/Px4=",
+        "lastModified": 1784852340,
+        "narHash": "sha256-S4yPoVewMGFH4xwX56770UgJGqwy1nzyJoj4TuqMrKs=",
         "ref": "refs/heads/main",
-        "rev": "9b51aef07340f123344d16287864c80c2c662eaa",
-        "revCount": 296,
+        "rev": "d497ff8aafc9eb492538f2d87a7c8a49d2226aac",
+        "revCount": 299,
         "type": "git",
-        "url": "https://codeberg.org/ArkHost/HelixNotes"
+        "url": "https://gitlab.com/ArkHost/HelixNotes"
       },
       "original": {
         "type": "git",
-        "url": "https://codeberg.org/ArkHost/HelixNotes"
+        "url": "https://gitlab.com/ArkHost/HelixNotes"
       }
     },
     "nix-monitor": {
@@ -130,11 +130,11 @@
     },
     "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1784497964,
-        "narHash": "sha256-vlHUuqAcbcH2RKmHbPiuQzbv1pnzzavXnI62RD0bqCU=",
+        "lastModified": 1784796856,
+        "narHash": "sha256-wWFrV5/Qbm+lyt5x20E/bSbfJiGKMo4RCxZV8cl/WZI=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "241313f4e8e508cb9b13278c2b0fa25b9ca27163",
+        "rev": "e2587caef70cea85dd97d7daab492899902dbf5d",
         "type": "github"
       },
       "original": {
