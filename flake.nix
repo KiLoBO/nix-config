@@ -32,6 +32,14 @@
       nix-monitor,
       helix-notes,
     }@inputs:
+    let
+      helixNotesWrapped =
+        pkgs:
+        import ./packages/helix-notes.nix {
+          inherit pkgs;
+          helix-notes = inputs.helix-notes;
+        };
+    in
     {
       nixosModules = {
         base =
@@ -39,7 +47,7 @@
           {
             imports = [ ./base/system.nix ];
             environment.systemPackages = [
-              inputs.helix-notes.packages.${pkgs.system}.default
+              (helixNotesWrapped pkgs)
             ];
           };
 
@@ -60,7 +68,7 @@
               ./modules/nix-ld
             ];
             environment.systemPackages = [
-              inputs.helix-notes.packages.${pkgs.system}.default
+              (helixNotesWrapped pkgs)
             ];
           };
       };
