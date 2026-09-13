@@ -38,6 +38,7 @@
 
       pango
       cairo
+      libsoup_3
       gdk-pixbuf
       gtk3
       gtk4
