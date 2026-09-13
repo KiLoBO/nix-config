@@ -37,7 +37,9 @@
       gtk2
 
       pango
+      cairo
       gdk-pixbuf
+      gtk3
       gtk4
       webkitgtk_4_1
     ];
