@@ -67,9 +67,9 @@
               ./modules/dod/cac-read.nix
               ./modules/nix-ld
             ];
-            environment.systemPackages = [
-              (helixNotesWrapped pkgs)
-            ];
+            # environment.systemPackages = [
+            #   (helixNotesWrapped pkgs)
+            # ];
           };
       };
 
