@@ -36,7 +36,6 @@
     xdg-utils
     imagemagick
     hyprpicker
-    webcord
     manix
     tree
     gtk-engine-murrine
