@@ -92,7 +92,7 @@
             programs.dank-material-shell = {
               enable = lib.mkDefault true;
               enableSystemMonitoring = lib.mkDefault true;
-              dgop.package = inputs.dgop.packages.${pkgs.system}.default;
+              # dgop.package = inputs.dgop.packages.${pkgs.system}.default;
             };
             programs.nix-monitor = {
               enable = true;
