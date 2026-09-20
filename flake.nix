@@ -25,7 +25,6 @@
     {
       self,
       nixpkgs,
-      nixpkgs-unstable,
       dms,
       dgop,
       nix-monitor,
