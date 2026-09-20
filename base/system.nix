@@ -5,7 +5,6 @@
 {
   config,
   pkgs,
-  pkgs-unstable,
   ...
 }:
 
@@ -111,40 +110,34 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages =
-    with pkgs;
-    [
-      vim
-      vscode
-      zsh
-      neovim
-      tailscale
-      trayscale
-      maple-mono.Normal-NF
-      killall
-      nix-index
-      docker-compose
-      netbird
-      netbird-ui
+  environment.systemPackages = with pkgs; [
+    vim
+    vscode
+    zsh
+    neovim
+    tailscale
+    trayscale
+    maple-mono.Normal-NF
+    killall
+    nix-index
+    docker-compose
+    netbird
+    netbird-ui
 
-      # smartcard
-      pcsc-tools
+    # smartcard
+    pcsc-tools
 
-      # Rust
-      rustup
+    # Rust
+    rustup
 
-      # AstroNVIM Required
-      gccgo15
-      # nodejs
-      nodejs
-      git
-      python3
+    # AstroNVIM Required
+    gccgo15
+    # nodejs
+    nodejs
+    git
+    python3
 
-    ]
-    ++ (with pkgs-unstable; [
-      ty
-      winboat
-    ]);
+  ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
