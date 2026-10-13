@@ -123,6 +123,7 @@
     docker-compose
     netbird
     netbird-ui
+    bottles
 
     # smartcard
     pcsc-tools
