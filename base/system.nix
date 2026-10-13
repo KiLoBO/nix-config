@@ -123,7 +123,7 @@
     docker-compose
     netbird
     netbird-ui
-    bottles
+    (bottles.override { removeWarningPopup = true; })
 
     # smartcard
     pcsc-tools
