@@ -110,7 +110,7 @@
   
   # Allow electron 40
   nixpkgs.config.permittedInsecurePackages = [
-    "electron.40.10.5"
+    "electron-40.10.5"
   ];
 
   # List packages installed in system profile. To search, run:
