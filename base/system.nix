@@ -123,6 +123,7 @@
     docker-compose
     netbird
     netbird-ui
+    winboat
 
     # smartcard
     pcsc-tools
