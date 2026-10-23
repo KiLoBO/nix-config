@@ -19,6 +19,10 @@
       url = "git+https://gitlab.com/ArkHost/HelixNotes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    helium = {
+      url="github:schembriaiden/helium-browser-nix-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -65,9 +69,10 @@
               ./modules/dod/cac-read.nix
               ./modules/nix-ld
             ];
-            # environment.systemPackages = [
-            #   (helixNotesWrapped pkgs)
-            # ];
+            environment.systemPackages = [
+              # (helixNotesWrapped pkgs)
+              inputs.helium.packages.${pkgs.system}.default
+            ];
           };
       };
 
