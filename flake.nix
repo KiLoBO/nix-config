@@ -33,6 +33,7 @@
       dgop,
       nix-monitor,
       helix-notes,
+      helium,
     }@inputs:
     let
       helixNotesWrapped =
