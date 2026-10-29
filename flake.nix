@@ -22,11 +22,7 @@
     helium = {
       url = "github:schembriaiden/helium-browser-nix-flake";
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-    noctalia = {
-      url = "github:noctalia-dev/noctalia";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    }; 
   };
 
   outputs =
@@ -38,7 +34,6 @@
       nix-monitor,
       helix-notes,
       helium,
-      noctalia,
     }@inputs:
     let
       helixNotesWrapped =
@@ -78,7 +73,6 @@
             environment.systemPackages = [
               # (helixNotesWrapped pkgs)
               inputs.helium.packages.${pkgs.system}.default
-              inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default
             ];
           };
       };
@@ -86,33 +80,7 @@
       homeModules = {
         base = ./base/home.nix;
         catppuccin = ./themes/catppuccin;
-
-        noctalia-base = 
-          {
-            config,
-            inputs,
-            lib,
-            pkgs,
-            ...
-          }:{
-            imports = [
-              inputs.noctalia.homeModules.default
-            ];
-            programs.noctalia = {
-              enable = lib.mkDefault false;
-              settings = {
-                theme = {
-                  mode = "dark";
-                  source = "builtin";
-                  builtin = "Catppuccin";
-                };
-                wallpaper = {
-                  enabled = true;
-                  default.path = "/home/david/Pictures/wallpaper/spookyspillUpscaled.jpeg";
-                };
-              };
-            };
-          };
+ 
         dms-base =
           {
             config,
@@ -150,6 +118,6 @@
           };
       };
 
-      inherit (inputs) dms dgop nix-monitor noctalia;
+      inherit (inputs) dms dgop nix-monitor;
     };
 }
