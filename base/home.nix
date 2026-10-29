@@ -57,6 +57,7 @@
     protonup-qt
     go
     filezilla
+    jq
 
     # AstroNVIM Required
     ripgrep
