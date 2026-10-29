@@ -38,7 +38,7 @@
       nix-monitor,
       helix-notes,
       helium,
-      noctalia
+      noctalia,
     }@inputs:
     let
       helixNotesWrapped =
