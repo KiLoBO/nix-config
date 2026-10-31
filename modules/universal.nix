@@ -1,6 +1,6 @@
 { config, ... }:
 {
-  flake.modules.nixos.universal.imports = with config.flake.modules.nixos; [
+  flake.nixosModules.universal.imports = with config.flake.modules.nixos; [
     settings
     users
     virtualisation
@@ -16,7 +16,7 @@
     pkgs-extra
   ];
 
-  flake.modules.homeManager.universal.imports = with config.flake.modules.homeManager; [
+  flake.homeManagerModules.universal.imports = with config.flake.modules.homeManager; [
     users
     pkgs-main
     catppuccin
