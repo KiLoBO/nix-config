@@ -1,0 +1,11 @@
+# stuff to migrate:
+- [x] base home manager config
+- [x] base system config
+- [x] dod modules
+- [x] nix-ld module
+- [x] sddm
+- [x] catppuccin theme
+- [~] helix-notes
+- [x] helium browser
+- [x] extra settings in flake
+- [x] create universal.nix

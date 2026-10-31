@@ -1,8 +1,14 @@
 {
-  description = "Shared Sys and Home configuration.";
+  description = "This flake contains 'universal' settings. Intended for any WM.";
 
   inputs = {
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    import-tree.url = "github:vic/import-tree";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    noctalia = {
+      url = "github:noctalia-dev/noctalia";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     dms = {
       url = "github:AvengeMedia/DankMaterialShell/stable";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -15,109 +21,17 @@
       url = "github:antonjah/nix-monitor";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    helium = {
+      url = "github:schembriaiden/helium-browser-nix-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     helix-notes = {
       url = "git+https://gitlab.com/ArkHost/HelixNotes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    helium = {
-      url = "github:schembriaiden/helium-browser-nix-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    }; 
   };
 
   outputs =
-    {
-      self,
-      nixpkgs,
-      dms,
-      dgop,
-      nix-monitor,
-      helix-notes,
-      helium,
-    }@inputs:
-    let
-      helixNotesWrapped =
-        pkgs:
-        import ./packages/helix-notes.nix {
-          inherit pkgs;
-          helix-notes = inputs.helix-notes;
-        };
-    in
-    {
-      nixosModules = {
-        base =
-          { config, pkgs, ... }:
-          {
-            imports = [ ./base/system.nix ];
-            environment.systemPackages = [
-              (helixNotesWrapped pkgs)
-            ];
-          };
-
-        sddm = ./modules/sddm;
-        dod-certs = ./modules/dod/dod-certs.nix;
-        cac-read = ./modules/dod/cac-read.nix;
-        nix-ld = ./modules/nix-ld;
-        catppuccin = ./themes/catppuccin/stylix-sys.nix;
-
-        all-features =
-          { pkgs, ... }:
-          {
-            imports = [
-              ./base/system.nix
-              ./modules/sddm
-              ./modules/dod/dod-certs.nix
-              ./modules/dod/cac-read.nix
-              ./modules/nix-ld
-            ];
-            environment.systemPackages = [
-              # (helixNotesWrapped pkgs)
-              inputs.helium.packages.${pkgs.system}.default
-            ];
-          };
-      };
-
-      homeModules = {
-        base = ./base/home.nix;
-        catppuccin = ./themes/catppuccin;
- 
-        dms-base =
-          {
-            config,
-            lib,
-            pkgs,
-            ...
-          }:
-          {
-            imports = [
-              inputs.dms.homeModules.dank-material-shell
-              inputs.nix-monitor.homeManagerModules.default
-            ];
-            programs.dank-material-shell = {
-              enable = lib.mkDefault true;
-              enableSystemMonitoring = lib.mkDefault true;
-              # dgop.package = inputs.dgop.packages.${pkgs.system}.default;
-            };
-            programs.nix-monitor = {
-              enable = true;
-              nixpkgsChannel = "nixos-26.05";
-              rebuildCommand = [
-                "bash"
-                "-c"
-                "nh os switch -a $NH_FLAKE"
-              ];
-            };
-          };
-
-        default =
-          { ... }:
-          {
-            imports = [
-              ./base/home.nix
-            ];
-          };
-      };
-
-      inherit (inputs) dms dgop nix-monitor;
-    };
+    inputs@{ flake-parts, import-tree, ... }:
+    flake-parts.lib.mkFlake { inherit inputs; } (import-tree ./modules);
 }
