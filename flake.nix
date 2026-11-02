@@ -5,6 +5,7 @@
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     noctalia = {
       url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -23,10 +24,6 @@
     };
     helium = {
       url = "github:schembriaiden/helium-browser-nix-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    helix-notes = {
-      url = "git+https://gitlab.com/ArkHost/HelixNotes";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     stylix = {
