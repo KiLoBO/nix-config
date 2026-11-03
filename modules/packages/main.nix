@@ -14,6 +14,7 @@
         docker-compose
         winboat
         rustup
+        wineWow64Packages.stable
 
         # AstroNVIM
         gccgo15
