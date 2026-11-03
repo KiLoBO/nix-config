@@ -15,6 +15,7 @@
         winboat
         rustup
         wineWow64Packages.stable
+        wine
 
         # AstroNVIM
         gccgo15
