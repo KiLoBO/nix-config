@@ -81,6 +81,7 @@
           intel-media-driver
           vpl-gpu-rt
         ];
+        enable32Bit = true;
       };
 
       programs.steam.enable = true;
