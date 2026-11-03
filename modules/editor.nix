@@ -35,12 +35,14 @@
           "Catppuccin Blur"
           "Catppuccin Icons"
           "Material Icon Theme"
+          "Colorizer"
         ];
         userSettings = {
           theme = {
             mode = "dark";
             # dark = "Catppuccin Frappé (Blur) [Heavy]";
-            dark = "Catppuccin Frappé";
+            # dark = "Catppuccin Frappé";
+            dark = "Colorizer Pro";
           };
           buffer_font_family = "Maple Mono NF";
           buffer_font_features = {
@@ -75,6 +77,11 @@
               syntax.keyword.font_style = "italic";
             };
             "Catppuccin Frappé" = {
+              syntax.boolean.font_style = "italic";
+              syntax.emphasis.font_style = "italic";
+              syntax.keyword.font_style = "italic";
+            };
+            "Colorizer Pro" = {
               syntax.boolean.font_style = "italic";
               syntax.emphasis.font_style = "italic";
               syntax.keyword.font_style = "italic";
