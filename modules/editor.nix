@@ -36,6 +36,7 @@
           "Catppuccin Icons"
           "Material Icon Theme"
           "Colorizer"
+          "kdl"
         ];
         userSettings = {
           theme = {

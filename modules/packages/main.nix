@@ -16,6 +16,7 @@
         rustup
         wineWow64Packages.stable
         wine
+        ntfs3g
 
         # AstroNVIM
         gccgo15
