@@ -14,6 +14,7 @@
     pkgs-main
     catppuccin
     pkgs-extra
+    git
   ];
 
   flake.homeManagerModules.universal.imports = with config.flake.modules.homeManager; [

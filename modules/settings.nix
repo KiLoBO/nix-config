@@ -87,7 +87,6 @@
       programs.steam.enable = true;
 
       services.gvfs.enable = true;
-      programs.git.enable = true;
 
       programs.appimage.enable = true;
       programs.appimage.binfmt = true;
